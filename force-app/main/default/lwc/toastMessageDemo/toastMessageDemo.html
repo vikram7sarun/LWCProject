@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : vikram7sarun@gmail.com
+  @group             : 
+  @last modified on  : 03-03-2025
+  @last modified by  : vikram7sarun@gmail.com
+-->
+<template>
+    <lightning-card title="Toast Message Demo" icon-name="utility:info">
+        <div class="slds-var-m-around_medium">
+            <lightning-button label="Success" variant="brand" onclick={handleSuccessClick} class="slds-var-m-right_small"></lightning-button>
+            <lightning-button label="Error" variant="destructive" onclick={handleErrorClick} class="slds-var-m-right_small"></lightning-button>
+            <lightning-button label="Info" variant="neutral" onclick={handleInfoClick} class="slds-var-m-right_small"></lightning-button>
+            <lightning-button label="Warning" variant="brand-outline" onclick={handleWarningClick} class="slds-var-m-right_small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

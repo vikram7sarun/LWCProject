@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : vikram7sarun@gmail.com
+  @group             : 
+  @last modified on  : 03-04-2025
+  @last modified by  : vikram7sarun@gmail.com
+-->
+<template>
+    <lightning-card title="Lightning Record View Form Demo">
+      <div class="slds-var-p-around_medium">
+        <!--Create alightning record view form-->
+        <lightning-record-view-form
+          object-api-name = {objectApiName}
+          record-id = "006ak000008oagPAAQ">
+
+          <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-output-field field-name={name}></lightning-output-field>
+                <lightning-output-field field-name={amount}></lightning-output-field>
+                <lightning-output-field field-name={closeDate}></lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-output-field field-name={expectedRevenue}></lightning-output-field>
+                <lightning-output-field field-name={stageName}></lightning-output-field>
+            </div>
+          </div>
+          
+          <!--Lightning-output-field-->
+          
+        </lightning-record-view-form>
+      </div>
+    </lightning-card>
+</template>

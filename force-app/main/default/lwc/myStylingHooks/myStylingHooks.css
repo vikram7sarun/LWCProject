@@ -1,0 +1,5 @@
+.my-style {
+    --slds-c-button-brand-color-background: green;
+    --slds-c-button-brand-color-border: green;
+    --slds-c-button-text-color: white;
+}

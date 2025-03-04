@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : vikram7sarun@gmail.com
+  @group             : 
+  @last modified on  : 03-02-2025
+  @last modified by  : vikram7sarun@gmail.com
+-->
+<template>
+    <lightning-card title="My Course Details">
+        <div class="slds-p-around_medium">
+            <div class="fname">FirstName : {firstName}</div>
+            <div>LastName  : {lastName}</div>
+            <div>FullName  : {fullName}</div>
+            <div>Days      : {days}</div>
+            <div>Session   : {qaSlot.Session}</div>
+            <div>Timing    : {qaSlot.Timing}</div>
+            <div>Duration  : {qaSlot.Duration}</div>
+            <div>No Of Course : {noOfCourseChosen}</div>
+        </div>
+        <div class="slds-p-around_medium">
+        <lightning-input type="text" label="Enter First Name" onchange={handleInput}></lightning-input>
+       </div>
+    </lightning-card>
+</template>

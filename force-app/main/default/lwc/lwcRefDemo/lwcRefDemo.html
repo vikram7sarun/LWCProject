@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : vikram7sarun@gmail.com
+  @group             : 
+  @last modified on  : 03-03-2025
+  @last modified by  : vikram7sarun@gmail.com
+-->
+<template>
+    <lightning-card title="lwc:ref Demo">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Name"></lightning-input>
+            <lightning-input label="Age" type="number" onclick={handleAgeChange}></lightning-input>
+            <div class="slds-var-m-around_medium slds-align_absolute-center">
+            <lightning-button label="Check Eligibility" onclick={handleEligibleCheck}></lightning-button>
+            </div>
+
+        <div lwc:ref="refEligible">
+            
+        </div>
+
+        </div>
+        
+    </lightning-card>
+</template>

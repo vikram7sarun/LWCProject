@@ -1,0 +1,59 @@
+<!--
+  @description       : 
+  @author            : vikram7sarun@gmail.com
+  @group             : 
+  @last modified on  : 03-02-2025
+  @last modified by  : vikram7sarun@gmail.com
+-->
+<template>
+    <lightning-card title="Conditional Rendering">
+    <div class="slds-p-around_medium">
+        <b>Choose Your Interest : </b>
+        <div><lightning-input label="Shopping" class="shopCheck" type="checkbox" onchange={handleShoppingChange}></lightning-input></div>    
+        <div><lightning-input label="Reading" class="readCheck" type="checkbox" onchange={handleReadingChange}></lightning-input> </div>  
+    </div>
+    <!--Conditional Rendering-->
+   <!--If-->    
+    <template lwc:if={isShoppingChoosen}>
+        <lightning-card title="Shopping Sites">
+            <div class="slds-p-around_medium slds-box">
+                <ul>
+                    <li>
+                        <a href="https://www.amazon.com">Amazon</a>
+                    </li>
+                    <li>
+                        <a href="https://www.myntra.com">Myntra</a>
+                    </li>
+                    <li>
+                        <a href="https://www.flipkart.com">Flipkart</a>
+                    </li>
+                </ul>
+
+            </div>
+        </lightning-card>
+
+    </template>
+    <template lwc:elseif={isReadingChoosen}>
+        <lightning-card title="Reading Sites">
+            <div class="slds-p-around_medium slds-box">
+                <ul>
+                    <li>
+                        <a href="https://www.reading.com/">Reading</a>
+                    </li>
+                    <li>
+                        <a href="https://storybookscanada.ca/">StoryBooks</a>
+                    </li>
+                    <li>
+                        <a href="https://readtheory.org/">Read Theory</a>
+                    </li>
+                </ul>
+            </div>
+        </lightning-card>
+
+    </template>
+    <template lwc:else>
+        <div><b>Nothing Chosen!!</b></div>
+    </template>
+
+    </lightning-card>
+</template>

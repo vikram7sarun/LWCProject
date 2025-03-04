@@ -1,0 +1,51 @@
+<!--
+  @description       : 
+  @author            : vikram7sarun@gmail.com
+  @group             : 
+  @last modified on  : 03-03-2025
+  @last modified by  : vikram7sarun@gmail.com
+-->
+<template>  
+  <lightning-card title="Template Looping"> 
+    <div class="slds-p-around_medium slds-box">
+        <h3>Fruits List 🍎🍌🍊</h3>
+            <ul>
+                <template for:each={fruits} for:item="fruit">
+                    <li key={fruit}>{fruit}</li>
+                </template>
+            </ul>
+    </div>
+
+    <div class="slds-p-around_medium slds-box">
+        <h3>Student List🎓</h3>
+            <ul>
+                <template for:each={students} for:item="student">
+                    <li key={student.Id}>{student.name} - {student.grade}</li>
+                </template>
+            </ul>
+    </div>
+
+    <div class="slds-p-around_medium slds-box">
+        <h3>Employee List 🏢</h3>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-box">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={employees} for:item="emp">
+                    <tr key={emp.id}>
+                        <td>{emp.name}</td>
+                        <td>{emp.position}</td>
+                        <td>{emp.department}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+
+  </lightning-card>
+</template>
