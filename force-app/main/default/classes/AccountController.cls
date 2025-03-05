@@ -7,14 +7,11 @@
 **/
 public with sharing class AccountController 
 {
-    public static void getHighRevenueAccountRecords() 
-    {
-        try{
-
-        }catch (Exception e){
-
-        }
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getHighRevenueAccountRecords() {
+        return [SELECT Id, Name, AnnualRevenue FROM Account WHERE AnnualRevenue > 1000000 LIMIT 10];
     }
+
 
 
 

@@ -1,3 +1,28 @@
+<!--
+  @description       : 
+  @author            : vikram7sarun@gmail.com
+  @group             : 
+  @last modified on  : 03-04-2025
+  @last modified by  : vikram7sarun@gmail.com
+-->
 <template>
-    
+    <lightning-card title="High Revenue Account Records">
+        <div class="slds-var-p-around_medium">
+            <template if:true={accountToDisplay.length}>
+                <template for:each={accountToDisplay} for:item="account">
+                    <div key={account.Id} class="slds-box slds-var-m-bottom_small">
+                        <p><strong>Account Name:</strong> {account.Name}</p>
+                        <p><strong>Annual Revenue:</strong> 
+                            <lightning-formatted-number value={account.AnnualRevenue} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                        </p>
+                    </div>
+                </template>
+            </template>
+            <template if:false={accountToDisplay.length}>
+                <p>No high-revenue accounts found.</p>
+            </template>
+        </div>
+    </lightning-card>
 </template>
+
+
